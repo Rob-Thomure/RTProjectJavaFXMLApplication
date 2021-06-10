@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="413.0" prefWidth="923.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+   <children>
+      <Label layoutX="34.0" layoutY="23.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <HBox layoutX="1.0" layoutY="79.0" prefHeight="27.0" prefWidth="911.0">
+         <children>
+            <Label text="Parts">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#onActionSearchParts" text="Search">
+               <HBox.margin>
+                  <Insets left="125.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="searchPartsTxt">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Products">
+               <HBox.margin>
+                  <Insets left="45.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#onActionSearchProducts" text="Search">
+               <HBox.margin>
+                  <Insets left="110.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="searchProductsTxt">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <TableView fx:id="partsTableView" layoutX="34.0" layoutY="114.0" prefHeight="200.0" prefWidth="412.0">
+         <columns>
+            <TableColumn fx:id="partIdCol" prefWidth="100.0" text="Part ID" />
+            <TableColumn fx:id="partNameCol" prefWidth="100.0" text="Part Name" />
+            <TableColumn fx:id="partInventoryLevelCol" prefWidth="100.0" text="Inventory Level" />
+            <TableColumn fx:id="partPricePerUnitCol" prefWidth="110.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <TableView fx:id="productsTableView" layoutX="472.0" layoutY="117.0" prefHeight="200.0" prefWidth="419.0">
+        <columns>
+          <TableColumn fx:id="ProductIdCol" prefWidth="113.0" text="Product ID" />
+          <TableColumn fx:id="ProductNameCol" prefWidth="122.0" text="Product Name" />
+            <TableColumn fx:id="ProductInventoryLevelCol" prefWidth="97.0" text="Inventory Level" />
+            <TableColumn fx:id="ProductsPricePerUnitCol" prefWidth="86.0" text="Price Per Unit" />
+        </columns>
+      </TableView>
+      <HBox layoutX="5.0" layoutY="325.0" prefHeight="27.0" prefWidth="903.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionAddParts" text="Add">
+               <HBox.margin>
+                  <Insets left="220.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionModifyParts" text="Modify">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="65.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionDeleteParts" text="Delete">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="120.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionAddProducts" text="Add">
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="175.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionModifyProducts" text="Modify">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="230.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionDeleteProducts" text="Delete">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button layoutX="830.0" layoutY="372.0" mnemonicParsing="false" onAction="#onActionExit" text="Exit" />
+      <Line endX="434.5" endY="56.0" layoutX="21.0" layoutY="14.0" startX="-5.207122802734375" startY="55.792877197265625" />
+      <Line endX="-100.20709228515625" endY="345.0" layoutX="556.0" layoutY="15.0" startX="-99.79290771484375" startY="55.70709228515625" />
+      <Line endX="38.29290771484375" endY="-36.0" layoutX="417.0" layoutY="396.0" startX="-405.79290771484375" startY="-36.0" />
+      <Line endX="2.5" endY="279.0" layoutX="14.0" layoutY="79.0" startX="2.4999847412109375" startY="-8.5" />
+      <Line endX="126.0" layoutX="776.0" layoutY="70.0" startX="-309.0" />
+      <Line endX="-5.5" endY="281.0" layoutX="472.0" layoutY="79.0" startX="-5.5" startY="-8.5" />
+      <Line endX="182.5" endY="-8.5" layoutX="719.0" layoutY="79.0" startX="182.5" startY="281.0" />
+      <Line endX="-13.0" endY="8.0" layoutX="914.0" layoutY="352.0" startX="-447.0" startY="8.0" />
+   </children>
+</AnchorPane>
